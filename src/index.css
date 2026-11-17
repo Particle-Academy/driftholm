@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "@particle-academy/react-fancy/styles.css";
+@source "../node_modules/@particle-academy/react-fancy/dist/**/*.js";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body, #root { height: 100%; }
+body {
+  background: radial-gradient(ellipse at 30% 0%, #123b45 0%, #0a2230 45%, #061219 100%) fixed;
+  color: #e2e8f0;
+}
+@keyframes swell { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-1.5px) } }
+.swell { animation: swell 5s ease-in-out infinite; }
+@keyframes glow { 0%,100% { opacity: .45 } 50% { opacity: 1 } }
+.glow { animation: glow 2.4s ease-in-out infinite; }
+.hex-target { cursor: pointer; }
+.hex-target:hover polygon.hex-face { filter: brightness(1.25); }
